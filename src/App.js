@@ -1,6 +1,8 @@
 import './App.css';
 import {getAuth} from 'firebase/auth'
 import app from './firebase/firebase.init';
+import RegisterReactBootstrap from './components/RegisterReactBootstrap/RegisterReactBootstrap';
+import RegisterBootsrtap from './components/RegisterBootsrap/RegisterBootsrtap';
 
 
 const auth = getAuth(app)
@@ -21,14 +23,10 @@ const handlePasswordBlur = event =>{
 
 function App() {
   return (
-    <div className="App">
-      <form onSubmit={handleRegister}>
-        <input onBlur={handleEmailBlur} type="email" name="email" id="" placeholder='Your Email' />
-        <br />
-        <input onBlur={handlePasswordBlur} type="password" name="password" id="" placeholder='Your Password' />
-        <br />
-        <button type="submit">Register</button>
-      </form>
+    <div className="">
+
+        <RegisterReactBootstrap></RegisterReactBootstrap>
+        <RegisterBootsrtap></RegisterBootsrtap>
     </div>
   );
 }
